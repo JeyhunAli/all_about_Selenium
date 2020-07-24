@@ -17,7 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 			 * 
 			 * another tip with debugging lets say you are checking if the title is matching with your code or not 
 			 * once you press the f6 after title code executed copy the title code for example <<< actualTitle.equals(expectedTitle>>
-			 * then right click on it 
+			 * then right click on it then click on watch it will show you the result set
 			 */
 			
 			//Windows:
@@ -53,6 +53,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 			
 			Thread.sleep(3000);
 			driver.quit();//close the browser
+			
+			/**
+			 * 
+			 *  next class im gonna deep talking about differences between quit and close 
+			 */
 			
 		}
 
