@@ -59,6 +59,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 			 *  next class im gonna deep talking about differences between quit and close 
 			 */
 			
+			
+			
 		}
 
 	}
