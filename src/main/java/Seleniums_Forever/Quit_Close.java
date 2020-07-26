@@ -1,4 +1,4 @@
-package jul_23_Selenium;
+package Seleniums_Forever;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
