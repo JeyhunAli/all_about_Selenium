@@ -27,7 +27,7 @@ public class BrowserUtility {
 			break;
 		case "safari":
 			WebDriverManager.getInstance(SafariDriver.class).setup();
-			driver = new ChromeDriver();
+			driver = new SafariDriver();
 			break;
 
 		default:
