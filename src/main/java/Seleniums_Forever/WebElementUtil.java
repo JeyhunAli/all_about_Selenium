@@ -3,11 +3,15 @@ package Seleniums_Forever;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebElementUtil {
 
@@ -286,6 +290,149 @@ public class WebElementUtil {
 
 			}
 		}
+
+	}
+	
+	
+	////////////////////////////////////////////////wait concept/////////////////////////////////////////////
+
+	public boolean isElementDisplayed_ThenClick(By locator, int timeout) {
+		WebElement element = null;
+		boolean flag = false;
+		for (int i = 0; i < timeout; i++) {
+
+			try {
+				element = getElement(locator);
+				flag = element.isDisplayed();
+				System.out.println(element + " element is displayed");
+				element.click();
+				break;
+			} catch (Exception e) {
+				System.out.println(" OOOOOPPPPSSSSS   waiting for element to be present on the page -->" + i + "secs");
+				try {
+					Thread.sleep(1000);
+
+				} catch (InterruptedException e1) {
+				}
+			}
+
+		}
+
+		return flag;
+	}
+
+	public boolean isElementDisplayed(By locator, int timeout) {
+		WebElement element = null;
+		boolean flag = false;
+		for (int i = 0; i < timeout; i++) {
+
+			try {
+				element = getElement(locator);
+				flag = element.isDisplayed();
+				System.out.println(element + " element is displayed");
+				break;
+			} catch (Exception e) {
+				System.err.println(" OOOOOPPPPSSSSS   waiting for element to be present on the page -->" + i + "secs");
+				try {
+					Thread.sleep(1000);
+
+				} catch (InterruptedException e1) {
+				}
+			}
+
+		}
+
+		return flag;
+
+	}
+
+	public boolean isElementDisplayed_ThenSendKEYS(By locator, int timeout, String value) {
+		WebElement element = null;
+		boolean flag = false;
+		for (int i = 0; i < timeout; i++) {
+
+			try {
+				element = getElement(locator);
+				flag = element.isDisplayed();
+				System.out.println(element + " element is displayed");
+				element.sendKeys(value);
+				break;
+			} catch (Exception e) {
+				System.out.println(" OOOOOPPPPSSSSS   waiting for element to be present on the page -->" + i + "secs");
+				try {
+					Thread.sleep(1000);
+
+				} catch (InterruptedException e1) {
+				}
+			}
+
+		}
+
+		return flag;
+	}
+
+	public WebElement waitForElementPresent(By locator, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		return element;
+
+	}
+
+	public WebElement waitForElementToBeVisible(By locator, int timeOut) {
+		WebElement element = getElement(locator);
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.visibilityOf(element));
+		return element;
+
+	}
+
+	public WebElement waitForElementToBeClickable(By locator, int timeOut) {
+		WebElement element = getElement(locator);
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		return element;
+
+	}
+
+	public String waitForURL(String url, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.urlContains(url));
+		return driver.getCurrentUrl();
+
+	}
+
+	public Alert waitForALERT(int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+		return alert;
+
+	}
+
+	public void clickWhenReady(By locator, int timeOut) {
+		WebElement element = getElement(locator);
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		element.click();
+
+	}
+
+	public String waitForContainsTitleToBePresent(String title, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.titleContains(title));
+		return driver.getTitle();
+
+	}
+
+	public List<WebElement> visibility_LISToF_Elements(By locator, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+
+	}
+
+	public String waitFor_Full_TitleToBePresent(String title, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.titleIs(title));
+		return driver.getTitle();
 
 	}
 
