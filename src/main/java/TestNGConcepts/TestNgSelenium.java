@@ -77,8 +77,8 @@ public class TestNgSelenium {
 
 	@Test(priority=3)
 	public void loginTest() {
-		driver.findElement(By.id("username")).sendKeys("test@gmail.com");
-		driver.findElement(By.id("password")).sendKeys("test@123");
+		driver.findElement(By.id("username")).sendKeys("Ali-ceyhun@list.ru");
+		driver.findElement(By.id("password")).sendKeys("hubspot123456789");
 		driver.findElement(By.id("loginBtn")).click();
 	}
 

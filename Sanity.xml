@@ -4,17 +4,17 @@
 <suite name="Hub spot Test automtion regression suite" verbose = "3">
 	
 	<parameter name ="url" value ="https://app.hubspot.com/login" />
-	<parameter name ="browser" value ="firefox" />
+	<parameter name ="browser" value ="chrome" />
 
 	<test name="hub spot functional test">
-		<parameter name ="username" value ="naveenanimation30@gmail.com" />
-		<parameter name ="password" value ="Test@1234" />
+		<parameter name ="username" value ="Ali-ceyhun@list.ru" />
+		<parameter name ="password" value ="hubspot123456789" />
 <!-- 		
-		<parameter name ="username" value ="naveenanimation30@gmail.com" />
-		<parameter name ="password" value ="Test@1234" />
+		<parameter name ="username" value ="Ali-ceyhun@list.ru" />
+		<parameter name ="password" value ="hubspot123456789" />
 		
-		<parameter name ="username" value ="naveenanimation30@gmail.com" />
-		<parameter name ="password" value ="Test@1234" /> -->
+		<parameter name ="username" value ="Ali-ceyhun@list.ru" />
+		<parameter name ="password" value ="hubspot123456789" /> -->
 		
 	
 		<classes>
