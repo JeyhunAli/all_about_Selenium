@@ -27,6 +27,8 @@ public class Quit_Close {
 		 *  browser id same one but its expired 
 		 *  its not null as quit method in quit method it says null id 
 		 *  but with close it says invalid id means its already expired 
+		 *  the main differnces after quit in debugging mode no session id is available but after close session id is available
+		 *  but its already expired no use of that 
 		 *  
 		 *  
 		 *  somebody can ask silly question so how i can solve this issue 

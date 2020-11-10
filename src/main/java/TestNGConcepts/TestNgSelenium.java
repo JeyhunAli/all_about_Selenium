@@ -1,6 +1,5 @@
 package TestNGConcepts;
 
-
 /**
  * 
  * 
@@ -29,9 +28,10 @@ After Test will always execute later to After Method, After Class
  *
  *but with @beforeMethod browser will execute with number of test cases 
  *it means how many test cases you have it will execute 
+ *
+ *we can define priority as  -1 it will execute first 
+ *if we have priority and non priority based test methods first non priority based test methods execute first 
  */
-
-
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -63,19 +63,19 @@ public class TestNgSelenium {
 		driver.get("https://app.hubspot.com/login");
 	}
 
-	@Test(priority=2)
+	@Test(priority = 2)
 	public void verifyLoginPageTitleTest() {
 		String title = driver.getTitle();
 		System.out.println("login page titls is: " + title);
 		AssertJUnit.assertEquals(title, "HubSpot Login");
 	}
 
-	@Test(priority=1)
+	@Test(priority = 1)
 	public void verifySignUpLinkTest() {
 		AssertJUnit.assertTrue(driver.findElement(By.linkText("Sign up")).isDisplayed());
 	}
 
-	@Test(priority=3)
+	@Test(priority = 3)
 	public void loginTest() {
 		driver.findElement(By.id("username")).sendKeys("Ali-ceyhun@list.ru");
 		driver.findElement(By.id("password")).sendKeys("hubspot123456789");
