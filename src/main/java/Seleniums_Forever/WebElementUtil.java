@@ -370,6 +370,35 @@ public class WebElementUtil {
 
 		return flag;
 	}
+	
+	
+	public  WebElement customAttemptElement(By locator) {
+
+		WebElement element = null;
+		int attempts = 0;
+
+		while (attempts < 30) {
+
+			try {
+				element = getElement(locator);
+				break;
+			} catch (Exception e) {
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e1) {
+				}
+			}
+
+			attempts++;
+		}
+		System.out.println("element found after attempt number " + attempts);
+		return element;
+
+	}
+
+	
+	
+	
 
 	public WebElement waitForElementPresent(By locator, int timeOut) {
 		WebDriverWait wait = new WebDriverWait(driver, timeOut);
