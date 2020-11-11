@@ -27,7 +27,7 @@ public class explicitlywaitCustom2 {
 		//refreshing page in order to get stale element exception and catch block lets if it can handle it
 		driver.navigate().refresh();
 
-		ele = retryingElement(emailId);
+		//ele = retryingElement(emailId);
 		ele.sendKeys("test11@gmail.com");
 
 	}
@@ -51,7 +51,6 @@ public class explicitlywaitCustom2 {
 
 				}
 			}
-			
 //
 //			catch (NoSuchElementException e) {
 //				try {
