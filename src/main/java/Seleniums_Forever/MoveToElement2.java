@@ -15,6 +15,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  *most of the time i would say almost all the time when you work with dom whatever element link written on ui part choose that one 
  *because some element on the page written with capital letter and on dom they written with small letter always go for 
  *with dom structure 
+ *but sometimes it works as it written in ui page so if either ofthem not working 
+ *try another way 
  */
 
 public class MoveToElement2 {

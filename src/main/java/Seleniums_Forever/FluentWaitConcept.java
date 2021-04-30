@@ -2,6 +2,14 @@ package Seleniums_Forever;
 
 import java.time.Duration;
 
+/**
+ * differences with fluent wait and webdriver wait 
+ * is fluent wait is providing on the fly polling concept and ignoring concept 
+ * ignoring any kind of exception 
+ * 
+ * 
+ */
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;

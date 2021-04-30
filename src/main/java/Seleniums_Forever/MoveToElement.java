@@ -7,7 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MoveToElement {
-
+/**
+ * 
+ * @param args
+ * @throws InterruptedException
+ * here in this move to element concept u will see triple move to element action 
+ */
+	
 	public static void main(String[] args) throws InterruptedException {
 
 		WebDriverManager.chromedriver().setup();

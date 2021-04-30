@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3790" started-at="2020-10-29T21:45:18 EDT" finished-at="2020-10-29T21:45:22 EDT">
+  <suite name="Default suite" duration-ms="4" started-at="2020-11-29T01:36:13Z" finished-at="2020-11-29T01:36:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3790" started-at="2020-10-29T21:45:18 EDT" finished-at="2020-10-29T21:45:22 EDT">
-      <class name="Seleniums_Forever.AmazonDropDown">
-        <test-method status="PASS" signature="amazonTest()[pri:0, instance:Seleniums_Forever.AmazonDropDown@fd46303]" name="amazonTest" duration-ms="3616" started-at="2020-10-29T21:45:18 EDT" finished-at="2020-10-29T21:45:22 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amazonTest -->
-      </class> <!-- Seleniums_Forever.AmazonDropDown -->
+    <test name="Default test" duration-ms="4" started-at="2020-11-29T01:36:13Z" finished-at="2020-11-29T01:36:13Z">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

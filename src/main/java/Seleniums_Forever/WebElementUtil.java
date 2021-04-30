@@ -510,7 +510,24 @@ public class WebElementUtil {
 		
 	}
 	
+	public void done () {
+		      System.out.println("                                   //");
+	          System.out.println("                                  //");
+	          System.out.println("                                 //");
+	          System.out.println("                                //");
+	          System.out.println("                               //");
+	          System.out.println("                              //");
+	          System.out.println("            \\\\               //");
+	          System.out.println("             \\\\             //");
+	          System.out.println("              \\\\           //");
+	          System.out.println("               \\\\         //");
+	          System.out.println("                \\\\       //");
+	          System.out.println("                 \\\\     //");
+	          System.out.println("                  \\\\   //");
+	          System.out.println("                   \\\\ //");
+	          System.out.println("                   Done");
 	
+	}
 	
 	
 	
